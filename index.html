@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exhibition AG - Student Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Exhibition Assemblies of God</h1>
+    <p>Student Tracker</p>
+  </header>
+
+  <main>
+    <!-- FORM TO ADD / EDIT STUDENT -->
+    <section class="form-card">
+      <h2 id="form-title">Add New Student</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id">
+
+        <label>Full Name *</label>
+        <input type="text" id="name" required placeholder="e.g. Kwame Mensah">
+
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. 024XXXXXXX">
+
+        <label>Gender</label>
+        <select id="gender">
+          <option value="">-- Select --</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+
+        <label>Level</label>
+        <select id="level">
+          <option value="">-- Select --</option>
+          <option>SHS</option>
+          <option>University</option>
+          <option>Training College</option>
+          <option>Technical School</option>
+        </select>
+
+        <label>School Name *</label>
+        <input type="text" id="school" required placeholder="e.g. KNUST">
+
+        <label>Program / Course</label>
+        <input type="text" id="program" placeholder="e.g. Computer Science">
+
+        <label>Year / Form</label>
+        <input type="text" id="year" placeholder="e.g. Year 2 / Form 3">
+
+        <label>Hometown / Address</label>
+        <input type="text" id="address" placeholder="e.g. Kumasi">
+
+        <div class="buttons">
+          <button type="submit" id="save-btn">Save Student</button>
+          <button type="button" id="cancel-btn" style="display:none;">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search-card">
+      <input type="text" id="search" placeholder="🔍 Search by name or school...">
+      <p id="count">Total students: 0</p>
+    </section>
+
+    <!-- STUDENT LIST -->
+    <section id="student-list"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
